@@ -12,4 +12,5 @@
       <exclude name="ApexCSRF"/>
     </rule>
     <rule ref="category/apex/errorprone.xml/ApexCSRF" />
+    <rule ref="category/vf/security.xml" />
 </ruleset>
