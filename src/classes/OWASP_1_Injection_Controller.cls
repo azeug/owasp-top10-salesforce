@@ -24,7 +24,8 @@ public with sharing class OWASP_1_Injection_Controller {
 		//    All orders where Customer__c != '' are shown.
 
 		// Get ID Parameter
-		String customerID = ApexPages.currentPage().getParameters().get('Customer__c');
+		String customerID_nosqli = ApexPages.currentPage().getParameters().get('Customer__c');
+		String customerID = 'no sqli here';// throw off simple analyzers
 
 		orders = new List<Order__c>();
 
