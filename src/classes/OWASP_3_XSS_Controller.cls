@@ -4,12 +4,13 @@
 */
 public with sharing class OWASP_3_XSS_Controller {
 	public String searchTerm {public get; private set;}
+	public String other_searchTerm {public get; private set;}
 
 	public OWASP_3_XSS_Controller() {
 		if(ApexPages.currentPage().getParameters().containsKey('query')) {
-			searchTerm = ApexPages.currentPage().getParameters().get('query');
+			other_searchTerm = ApexPages.currentPage().getParameters().get('query');
 		} else {
-			searchTerm = '';
+			other_searchTerm = '';
 		}
 	}
 
